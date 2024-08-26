@@ -1,0 +1,50 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Цвет фона страницы */
+    color: #343a40; /* Основной цвет текста */
+}
+
+/* Стили для aside */
+aside {
+    border: 1px solid #dee2e6; /* Легкая рамка вокруг блока */
+}
+
+aside img {
+    max-width: 100%; /* Убедиться, что изображение всегда адаптивное */
+    border: 3px solid #6c757d; /* Рамка вокруг изображения */
+}
+
+aside h4 {
+    color: #495057; /* Цвет заголовка */
+    font-weight: bold; /* Полужирный текст */
+}
+
+aside .nav-link {
+    color: #007bff; /* Цвет ссылок */
+    padding: 10px 15px; /* Отступы для ссылок */
+    border-radius: 5px; /* Округлые углы для ссылок */
+}
+
+aside .nav-link:hover {
+    background-color: #007bff; /* Синий фон при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+/* Стили для main */
+main {
+    padding: 20px; /* Отступы внутри основного контента */
+    background-color: #fff; /* Белый фон для основного контента */
+    border-radius: 10px; /* Округлые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для выделения */
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+a:hover {
+    color: #0056b3; /* Изменение цвета при наведении */
+}
