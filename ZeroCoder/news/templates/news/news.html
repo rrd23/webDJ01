@@ -10,12 +10,19 @@
 
 <h1>новостная страница</h1>
 
-{% for new in news %}
-	<div>
-		<h3> {{ new.title }} </h3>
-		<p> {{ new.short_description }} </p>
-	</div>
-{% endfor %}
+ <ul>
+        {% for post in news %}
+            <li>
+                <h2>{{ post.title }}</h2>
+                <p><strong>Описание:</strong> {{ post.short_description }}</p>
+                <p><strong>Новость:</strong> {{ post.text }}</p>
+                <p><strong>Дата публикации:</strong> {{ post.pub_date }}</p>
+                <p><strong>Имя пользователя:</strong> {{ post.user_name }}</p>
+            </li>
+        {% endfor %}
+ </ul>
 
 
 {% endblock %}
+
+
