@@ -6,7 +6,7 @@
 
 {% block content %}
 <h1>Страница для добавления новостей</h1>
-{{form}}
+
 <div>
 
 	<form method="post" class="mt-4">
@@ -14,23 +14,24 @@
       <div class="mb-3">
         <label for="title" class="form-label">Заголовок новости</label>
         <input type="text" class="form-control" id="title" placeholder="Введите заголовок">
+       {{form.title}}
       </div>
     <div class="mb-3">
         <label for="short_description" class="form-label">Краткое описание новости</label>
         <input type="text" class="form-control" id="short_description" placeholder="Введите краткое описание">
+        {{form.short_description}}
     </div>
     <div class="mb-3">
         <label for="text" class="form-label">Содержание новости</label>
         <textarea class="form-control" id="text" placeholder="Введите содержание" rows="4"></textarea>
+        {{form.text}}
     </div>
     <div class="mb-3">
         <label for="pub_date" class="form-label">Дата публикации</label>
         <input type="date" class="form-control" id="pub_date">
+        {{form.pub_date}}
     </div>
-    <div class="mb-3">
-        <label for="pub_time" class="form-label">Время публикации</label>
-        <input type="time" class="form-control" id="pub_time">
-    </div>
+
     <button type="submit" class="btn btn-primary">Добавить новость</button>
     </form>
 
