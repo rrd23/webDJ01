@@ -1,28 +1,25 @@
-
-{% extends "main/layoute.html" %}
+{% extends 'main/layoute.html' %}
 
 {% block title %}
-  <title>новостная страница</title>
+	<title>Новостная страница</title>
 {% endblock %}
-
 
 {% block content %}
-
-<h1>новостная страница</h1>
-
- <ul>
-        {% for post in news %}
-            <li>
-                <h2>{{ post.title }}</h2>
-                <p><strong>Описание:</strong> {{ post.short_description }}</p>
-                <p><strong>Новость:</strong> {{ post.text }}</p>
-                <p><strong>Дата публикации:</strong> {{ post.pub_date }}</p>
-                <p><strong>Имя пользователя:</strong> {{ post.user_name }}</p>
-            </li>
-        {% endfor %}
- </ul>
-
+<h1>Новостная страница</h1>
+	{% if news %}
+		{% for new in news %}
+			<div class="card">
+				<div class="card" style="width: 30rem;">
+					<div class="card-body">
+						<h5 class="card-title">{{ new.title }}</h5>
+						<p class="card-text">{{ new.short_description }} </p>
+						<a href="#" class="btn btn-primary">Подробнее</a>
+					 </div>
+				</div>
+			</div>
+		{% endfor %}
+	{% else %}
+		<h4>Новостей ещё нет.</h4>
+	{% endif %}
 
 {% endblock %}
-
-

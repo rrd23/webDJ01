@@ -6,5 +6,3 @@ def home(request):
 	news = News_post.objects.all()
 	return render(request, 'news/news.html', {'news': news})
 
-
-# Create your views here.
