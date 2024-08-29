@@ -7,12 +7,13 @@
 {% block content %}
 <h1>Страница для добавления новостей</h1>
 <div>
-	
+
 	<form method="post" class="mt-4">
-    <div class="mb-3">
+    {% csrf_token %}
+      <div class="mb-3">
         <label for="title" class="form-label">Заголовок новости</label>
         <input type="text" class="form-control" id="title" placeholder="Введите заголовок">
-    </div>
+      </div>
     <div class="mb-3">
         <label for="short_description" class="form-label">Краткое описание новости</label>
         <input type="text" class="form-control" id="short_description" placeholder="Введите краткое описание">
